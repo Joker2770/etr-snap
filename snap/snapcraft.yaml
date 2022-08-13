@@ -30,7 +30,7 @@ plugs: # plugs for theming, font settings, cursor and to use gtk3 file chooser
 apps:
   extreme-tux-racer:
     command-chain: ["snap/command-chain/alsa-launch"]
-    command: usr/local/bin/extreme-tux-racer
+    command: usr/local/bin/etr
     environment:
       # pulseaudio
       LD_LIBRARY_PATH: ${SNAP}/usr/lib/$SNAPCRAFT_ARCH_TRIPLET/pulseaudio
