@@ -91,20 +91,18 @@ parts:
       - automake
       - make
       - libsfml-dev
-      - libsfml-system2.5
+      - libsfml-system2.4
       - libglu1-mesa-dev
   
     stage-packages:
-      - libsfml-window2.5
-      - libsfml-system2.5
-      - libsfml-network2.5
-      - libsfml-graphics2.5
-      - libsfml-audio2.5
+      - libsfml-window2.4
+      - libsfml-system2.4
+      - libsfml-network2.4
+      - libsfml-graphics2.4
+      - libsfml-audio2.4
       - libglu1-mesa
       - freepats
       - libmodplug1
       - libopusfile0
       - libpulse0
       - libsndfile1
-      - librsvg2-2
-      - librsvg2-common
