@@ -40,6 +40,7 @@ apps:
       # PULSE_SERVER: unix:$XDG_RUNTIME_DIR/../pulse/native
     extensions: [gnome-3-38]
     plugs:
+      - home
       - audio-playback
       - pulseaudio
       - alsa
@@ -48,7 +49,11 @@ apps:
       - wayland
       - unity7
       - x11
+      - opengl
       - gsettings
+      - network
+      - network-bind
+      - removable-media
         
 layout:
   /usr/share/midi/freepats:
