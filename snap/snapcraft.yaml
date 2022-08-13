@@ -55,6 +55,12 @@ layout:
     bind: $SNAP/usr/share/midi/freepats
   /usr/lib/$SNAPCRAFT_ARCH_TRIPLET/alsa-lib:
     bind: $SNAP/usr/lib/$SNAPCRAFT_ARCH_TRIPLET/alsa-lib
+  /usr/local/share/etr:
+    bind: $SNAP/share/etr
+  /usr/local/share/metainfo:
+    bind: $SNAP/share/metainfo
+  /usr/local/share/pixmaps:
+    bind: $SNAP/share/pixmaps
   /usr/share/alsa:
     bind: $SNAP/usr/share/alsa
   /etc/timidity:
@@ -87,7 +93,6 @@ parts:
       - libsfml-dev
       - libsfml-system2.5
       - libglu1-mesa-dev
-      - libopengl-dev
   
     stage-packages:
       - libsfml-window2.5
