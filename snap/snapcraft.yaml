@@ -56,11 +56,11 @@ layout:
   /usr/lib/$SNAPCRAFT_ARCH_TRIPLET/alsa-lib:
     bind: $SNAP/usr/lib/$SNAPCRAFT_ARCH_TRIPLET/alsa-lib
   /usr/local/share/etr:
-    bind: $SNAP/share/etr
+    bind: $SNAP/usr/local/share/etr
   /usr/local/share/metainfo:
-    bind: $SNAP/share/metainfo
+    bind: $SNAP/usr/local/share/metainfo
   /usr/local/share/pixmaps:
-    bind: $SNAP/share/pixmaps
+    bind: $SNAP/usr/local/share/pixmaps
   /usr/share/alsa:
     bind: $SNAP/usr/share/alsa
   /etc/timidity:
@@ -93,7 +93,8 @@ parts:
       - libsfml-dev
       - libsfml-system2.4
       - libglu1-mesa-dev
-  
+    configflags:
+      - --prefix=/usr/local
     stage-packages:
       - libsfml-window2.4
       - libsfml-system2.4
