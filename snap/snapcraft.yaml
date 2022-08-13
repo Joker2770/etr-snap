@@ -38,7 +38,7 @@ apps:
       # PULSE_SYSTEM: 1
       # PULSE_RUNTIME_PATH: /var/run/pulse
       # PULSE_SERVER: unix:$XDG_RUNTIME_DIR/../pulse/native
-    extensions: [gnome-3-28]
+    extensions: [gnome-3-38-2004]
     plugs:
       - audio-playback
       - pulseaudio
