@@ -56,8 +56,6 @@ apps:
       - removable-media
         
 layout:
-  /usr/share/midi/freepats:
-    bind: $SNAP/usr/share/midi/freepats
   /usr/lib/$SNAPCRAFT_ARCH_TRIPLET/alsa-lib:
     bind: $SNAP/usr/lib/$SNAPCRAFT_ARCH_TRIPLET/alsa-lib
   /usr/local/share/etr:
@@ -68,8 +66,6 @@ layout:
     bind: $SNAP/usr/local/share/pixmaps
   /usr/share/alsa:
     bind: $SNAP/usr/share/alsa
-  /etc/timidity:
-    bind: $SNAP/etc/timidity
   /etc/fonts:
     bind: $SNAP/etc/fonts
     
@@ -107,8 +103,4 @@ parts:
       - libsfml-graphics2.5
       - libsfml-audio2.5
       - libglu1-mesa
-      - freepats
-      - libmodplug1
-      - libopusfile0
       - libpulse0
-      - libsndfile1
