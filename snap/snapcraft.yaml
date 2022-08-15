@@ -6,6 +6,9 @@ summary: High speed arctic racing game based on Tux Racer. # 79 char long summar
 description: |
   High speed arctic racing game based on Tux Racer.
 
+  **For saving user data of scores, players, etc. Please install with 'devmode'.**
+  `sudo snap install --devmode extreme-tux-racer`
+
 # icon: snap/gui/icon.png
 
 grade: stable # must be 'stable' to release into candidate/stable channels
