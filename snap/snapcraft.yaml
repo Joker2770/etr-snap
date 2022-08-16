@@ -9,6 +9,8 @@ description: |
   **For saving user data of scores, players, etc. Please install with 'devmode'.**
   `sudo snap install --devmode extreme-tux-racer`
 
+  _more build details: https://github.com/Joker2770/etr-snap_
+
 # icon: snap/gui/icon.png
 
 grade: stable # must be 'stable' to release into candidate/stable channels
@@ -36,7 +38,7 @@ plugs: # plugs for theming, font settings, cursor and to use gtk3 file chooser
 apps:
   extreme-tux-racer:
     command-chain: ["snap/command-chain/alsa-launch"]
-    command: usr/local/bin/launcher.sh
+    command: usr/local/bin/etr
     environment:
       # pulseaudio
       LD_LIBRARY_PATH: ${SNAP}/usr/lib/$SNAPCRAFT_ARCH_TRIPLET/pulseaudio
@@ -110,21 +112,3 @@ parts:
       - libsfml-audio2.5
       - libglu1-mesa
       - libpulse0
-
-  include-launcher:
-    after: [extreme-tux-racer]
-    plugin: dump
-    source: "https://github.com/Joker2770/etr-snap.git"
-    source-depth: 1
-    source-branch: main
-    source-type: git
-    organize:
-      "launcher.sh" : usr/local/bin/
-    prime:
-      - -etr-*
-      - -README*
-      - -LICENSE
-      - -snap
-    override-build: |
-      snapcraftctl build
-      chmod +x launcher.sh
