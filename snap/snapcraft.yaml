@@ -7,6 +7,7 @@ description: |
   High speed arctic racing game based on Tux Racer.
 
   **For saving user data of scores, players, etc. Please install with 'devmode'.**
+
   `sudo snap install --devmode extreme-tux-racer`
 
   _more build details: https://github.com/Joker2770/etr-snap_
@@ -59,8 +60,6 @@ apps:
       - x11
       - opengl
       - gsettings
-      - network
-      - network-bind
       - removable-media
         
 layout:
