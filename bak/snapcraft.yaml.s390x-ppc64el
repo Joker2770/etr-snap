@@ -10,7 +10,7 @@ description: |
 
   `sudo snap install --devmode extreme-tux-racer`
 
-  _more build details: https://github.com/Joker2770/etr-snap_
+  _more build details: https://github.com/Joker2770/etr-snap _
 
 # icon: snap/gui/icon.png
 
