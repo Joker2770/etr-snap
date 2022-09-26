@@ -1,3 +1,25 @@
+#
+#    This is a snapcraft build script.
+#    Copyright (C) 2022 Jintao Yang <yjt950840@outlook.com>
+#
+#    This program is free software; you can redistribute it and/or modify
+#    it under the terms of the GNU General Public License as published by
+#    the Free Software Foundation; either version 2 of the License, or
+#    (at your option) any later version.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU General Public License for more details.
+#
+#    You should have received a copy of the GNU General Public License Version 2
+#    along with this program; if not, write to the Free Software
+#    Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+#
+#    snapcraft.yaml:
+#       snapcraft script.
+#       build snap package on Linux.
+#
 
 # After registering a name on build.snapcraft.io, commit an uncommented line:
 name: extreme-tux-racer
@@ -10,9 +32,7 @@ description: |
 
   `sudo snap install --devmode extreme-tux-racer`
 
-  _more build details: https://github.com/Joker2770/etr-snap _
-
-# icon: snap/gui/icon.png
+  _more build details: https://github.com/Joker2770/etr-snap_
 
 grade: stable # must be 'stable' to release into candidate/stable channels
 confinement: strict # use 'strict' once you have the right plugs and slots
@@ -41,12 +61,7 @@ apps:
     command-chain: ["snap/command-chain/alsa-launch"]
     command: usr/local/bin/etr
     environment:
-      # pulseaudio
       LD_LIBRARY_PATH: ${SNAP}/usr/lib/$SNAPCRAFT_ARCH_TRIPLET/pulseaudio
-      # ALSA_CONFIG_PATH: ${SNAP}/etc/asound.conf
-      # PULSE_SYSTEM: 1
-      # PULSE_RUNTIME_PATH: /var/run/pulse
-      # PULSE_SERVER: unix:$XDG_RUNTIME_DIR/../pulse/native
     extensions: [gnome-3-38]
     plugs:
       - home
@@ -87,7 +102,6 @@ parts:
       - libasound2
       - libasound2-plugins
       - yad
-
   extreme-tux-racer:
     after: [alsa-mixin]
     plugin: autotools
