@@ -38,7 +38,7 @@ grade: stable # must be 'stable' to release into candidate/stable channels
 confinement: strict # use 'strict' once you have the right plugs and slots
 base: core20
 architectures:
-  - build-on: ppc64el
+  - build-on: s390x
 
 plugs: # plugs for theming, font settings, cursor and to use gtk3 file chooser
   gtk-3-themes:
@@ -122,7 +122,7 @@ parts:
       - libsfml-system2.5
       - libglu1-mesa-dev
     autotools-configure-parameters:
-      - --build=powerpc64le-unknown-linux-gnu
+      - --build=s390x-unknown-linux-gnu
       - --prefix=/usr/local
     stage-packages:
       - libsfml-window2.5
