@@ -132,3 +132,4 @@ parts:
       - libsfml-audio2.5
       - libglu1-mesa
       - libpulse0
+      - libopengl0
