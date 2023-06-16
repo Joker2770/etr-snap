@@ -105,8 +105,8 @@ parts:
   extreme-tux-racer:
     after: [alsa-mixin]
     plugin: autotools
-    source: "https://github.com/Joker2770/etr-snap/raw/main/etr-0.8.2.tar.xz"
-    source-type: tar
+    source: "https://svn.code.sf.net/p/extremetuxracer/code/trunk"
+    source-type: svn
     build-packages:
       - gcc
       - build-essential
