@@ -76,6 +76,8 @@ apps:
       - opengl
       - gsettings
       - removable-media
+      - system-files
+      - personal-files
         
 layout:
   /usr/lib/$SNAPCRAFT_ARCH_TRIPLET/alsa-lib:
