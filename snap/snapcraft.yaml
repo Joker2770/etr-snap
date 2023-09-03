@@ -55,10 +55,6 @@ plugs: # plugs for theming, font settings, cursor and to use gtk3 file chooser
     interface: content
     target: $SNAP/data-dir/sounds
     default-provider: gtk-common-themes
-  dot-etr:
-    interface: personal-files
-    read:
-      - $HOME/.etr/
   dot-etr-options:
     interface: personal-files
     write:
@@ -101,7 +97,6 @@ apps:
       - gsettings
       - removable-media
       - etc-openal-alsoft
-      - dot-etr
       - dot-etr-options
       - dot-etr-highscore
       - dot-etr-players
