@@ -53,26 +53,6 @@ plugs: # plugs for theming, font settings, cursor and to use gtk3 file chooser
     interface: content
     target: $SNAP/data-dir/sounds
     default-provider: gtk-common-themes
-  dot-etr-options:
-    interface: personal-files
-    write:
-      - $HOME/.etr/options.txt
-  dot-etr-highscore:
-    interface: personal-files
-    write:
-      - $HOME/.etr/highscore
-  dot-etr-messages:
-    interface: personal-files
-    write:
-      - $HOME/.etr/messages
-  dot-etr-players:
-    interface: personal-files
-    write:
-      - $HOME/.etr/players
-  etc-openal-alsoft:
-    interface: system-files
-    read:
-      - /etc/openal/alsoft.conf
 
 apps:
   extreme-tux-racer:
@@ -93,11 +73,6 @@ apps:
       - opengl
       - gsettings
       - removable-media
-      - etc-openal-alsoft
-      - dot-etr-options
-      - dot-etr-highscore
-      - dot-etr-players
-      - dot-etr-messages
 
 layout:
   /usr/lib/$SNAPCRAFT_ARCH_TRIPLET/alsa-lib:
